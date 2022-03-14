@@ -1,14 +1,17 @@
-pragma solidity ^0.4.17;
-// linter warnings (red underline) about pragma version can igonored!
-contract Inbox{
-    string public message;
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.9;
 
-    constructor(string initialMessage) public {
+// Define a new contract that will have some number of methods and variables
+contract Inbox {
+    // Declare all instance variables and their types that will exist in the contract
+    string public message;
+    
+    // Constructor function (old)
+    constructor(string memory initialMessage) {
         message = initialMessage;
     }
 
-    function setMessage(string newMessage) public {
+    function setMessage(string memory newMessage) public {
         message = newMessage;
     }
 }
-// contract code will go here
